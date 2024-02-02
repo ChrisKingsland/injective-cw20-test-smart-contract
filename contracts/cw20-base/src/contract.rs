@@ -543,6 +543,8 @@ pub fn query_balance(deps: Deps, address: String) -> StdResult<BalanceResponse> 
     Ok(BalanceResponse { balance })
 }
 
+
+
 pub fn query_token_info(deps: Deps) -> StdResult<TokenInfoResponse> {
     let info = TOKEN_INFO.load(deps.storage)?;
     let res = TokenInfoResponse {
